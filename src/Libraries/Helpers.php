@@ -10,6 +10,7 @@
 namespace LeoChien\Spgateway\Libraries;
 
 use GuzzleHttp\Client;
+use Illuminate\Support\Str;
 
 class Helpers
 {
@@ -79,6 +80,6 @@ class Helpers
      */
     public function generateOrderNo()
     {
-        return date('YmdHis') . str_random(6);
+        return date('YmdHis') . Str::random(6);
     }
 }
