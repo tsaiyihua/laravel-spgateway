@@ -99,7 +99,7 @@ class Receipt
         // 智付通開立電子發票必要資訊
         $postData = [
             'RespondType'      => $params['RespondType'] ?? 'JSON',
-            'Version'          => '1.4',
+            'Version'          => '1.5',
             'TimeStamp'        => time(),
             'TransNum'         => $params['TransNum'] ?? null,
             'MerchantOrderNo'  => $params['MerchantOrderNo'] ??
@@ -115,6 +115,7 @@ class Receipt
             'CarrierNum'       => $params['CarrierNum'] ?? null,
             'LoveCode'         => $params['LoveCode'] ?? null,
             'PrintFlag'        => $params['PrintFlag'] ?? 'Y',
+            'KioskPrintFlag'   => $params['KioskPrintFlag'] ?? null,
             'TaxType'          => $params['TaxType'] ?? '1',
             'TaxRate'          => $params['TaxRate'] ?? 5,
             'CustomsClearance' => $params['CustomsClearance'] ?? null,
