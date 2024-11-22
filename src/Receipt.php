@@ -19,22 +19,22 @@ class Receipt
     {
         if (config('app.env') === 'production') {
             $this->apiUrl['CREATE_RECEIPT_API']
-                = 'https://inv.pay2go.com/API/invoice_issue';
+                = 'https://inv.ezpay.com.tw/API/invoice_issue';
             $this->apiUrl['INVALID_RECEIPT_API']
-                = 'https://inv.pay2go.com/API/invoice_invalid';
+                = 'https://inv.ezpay.com.tw/API/invoice_invalid';
             $this->apiUrl['TRIGGER_RECEIPT_API']
-                = 'https://inv.pay2go.com/API/invoice_touch_issue';
+                = 'https://inv.ezpay.com.tw/API/invoice_touch_issue';
             $this->apiUrl['SEARCH_RECEIPT_API']
-                = 'https://inv.pay2go.com/API/invoice_search';
+                = 'https://inv.ezpay.com.tw/API/invoice_search';
         } else {
             $this->apiUrl['CREATE_RECEIPT_API']
-                = 'https://cinv.pay2go.com/API/invoice_issue';
+                = 'https://cinv.ezpay.com.tw/API/invoice_issue';
             $this->apiUrl['INVALID_RECEIPT_API']
-                = 'https://cinv.pay2go.com/API/invoice_invalid';
+                = 'https://cinv.ezpay.com.tw/API/invoice_invalid';
             $this->apiUrl['TRIGGER_RECEIPT_API']
-                = 'https://cinv.pay2go.com/API/invoice_touch_issue';
+                = 'https://cinv.ezpay.com.tw/API/invoice_touch_issue';
             $this->apiUrl['SEARCH_RECEIPT_API']
-                = 'https://cinv.pay2go.com/API/invoice_search';
+                = 'https://cinv.ezpay.com.tw/API/invoice_search';
         }
 
         $this->helpers = new Helpers();
