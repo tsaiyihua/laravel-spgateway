@@ -17,7 +17,7 @@ class Receipt
 
     public function __construct()
     {
-        if (config('app.env') === 'production') {
+        if (config('app.env') === 'production' || config('app.env') === 'pagecache') {
             $this->apiUrl['CREATE_RECEIPT_API']
                 = 'https://inv.pay2go.com/API/invoice_issue';
             $this->apiUrl['INVALID_RECEIPT_API']
