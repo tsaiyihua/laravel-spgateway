@@ -504,6 +504,11 @@ class MPG
 
     private function stripPadding($string)
     {
+        // 解密失敗 (false) 或空字串時，避免 ord('') 在 PHP 8.5 觸發 Deprecated；維持原本回傳 '' 的行為
+        if ($string === false || $string === '') {
+            return '';
+        }
+
         $slast = ord(substr($string, -1));
         $slastc = chr($slast);
         if (preg_match("/$slastc{" . $slast . '}/', $string)) {
